@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Hobby Room</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<script src="js/SimpleCart.js"></script>
+<script>
+	simpleCart({
+    cartColumns: [
+        { attr: "name" , label: "Name" } ,
+        { attr: "price" , label: "Price", view: 'currency' } ,
+        { view: "decrement" , label: false , text: "-" } ,
+        { attr: "quantity" , label: "Quantity" } ,
+        { view: "increment" , label: false , text: "+" } ,
+        { attr: "total" , label: "SubTotal", view: 'currency' } ,
+		{ view: "remove" , text: "Remove" , label: false }
+    ],
+	cartStyle: "table", 
+	taxRate: 0.06,
+});
+</script>
+<style type="text/css">
+    .simpleCart_items .headerRow div, .simpleCart_items .itemRow div {
+      float:left;
+      width: 20%;
+    }
+    .simpleCart_items .itemRow {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+   <div class="header_top">
+    <div class="container">
+	  <div class="header_top_left">
+	  	<p>customer care : 0-888-12-3456</p>
+	  </div>
+	  <div class="header_top_right">
+	  	<div class="lang_list">
+			<select tabindex="4" class="dropdown">
+				<option value="" class="label" value="">$ Us</option>
+				<option value="1">Dollar</option>
+				<option value="2">Euro</option>
+			</select>
+   		</div>
+   		<ul class="header_user_info">
+		  <a class="cart" href="cart.html">
+			<i class="user"></i> 
+			<li class="user_desc">My Account</li>
+		  </a>
+		  <div class="clearfix"> </div>
+	    </ul>
+	    <!-- start search-->
+			<div class="search-box">
+			   <div id="sb-search" class="sb-search">
+				  <form>
+					 <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+					 <input class="sb-search-submit" type="submit" value="">
+					 <span class="sb-icon-search"> </span>
+				  </form>
+			    </div>
+			 </div>
+			 <!----search-scripts---->
+			 <script src="js/classie.js"></script>
+			 <script src="js/uisearch.js"></script>
+			   <script>
+				 new UISearch( document.getElementById( 'sb-search' ) );
+			   </script>
+				<!----//search-scripts---->
+	            <div class="clearfix"> </div>
+		 </div>
+	  <div class="clearfix"> </div>
+	</div>
+  </div>
+<div class="header_bottom">
+	<div class="container">	 			
+		<div class="logo" style="height:70px;width:60px">
+		  <a href="index.html"><img src="images/logo1.jpeg" alt=""/></a>
+		</div>	
+		<div class="header_bottom_right">			
+	        <div class="h_menu4"><!-- start h_menu4 -->
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="classes.html">Classes</a>
+                    <ul>
+							<li><a href="art.html">Art+Design</a></li>
+							<li><a href="sewing.html">Sewing</a></li>
+							<li><a href="quilting.html">Quilting</a></li>
+							<li><a href="classes.html">Paper</a></li>
+							<li><a href="classes.html">Knitting</a></li>
+							<li><a href="classes.html">Home+Food</a></li>
+                            <li><a href="classes.html">Jewellery</a></li>
+							<li><a href="classes.html">Holiday+Party</a></li>
+						</ul>
+					</li>
+					<li><a href="inspiration.html">Inspiration</a>
+						<ul>
+							<li><a href="inspiration.html">Inspiration Feeds</a></li>
+							<li><a href="inspiration.html">Pattern Library</a></li>
+							<li><a href="inspiration.html">Class collection</a></li>
+                            <li><a href="inspiration.html">Blog</a></li>
+						</ul>
+					</li>
+					<li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="free.html">Free</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+	      </div><!-- end h_menu4 -->
+	      <div class="clearfix"></div>		   
+      </div>
+    </div>
+  </div>
+</div>
+<ul class="breadcrumbs">
+		<div class="container">
+			<li class="home">
+			   <a href="index.html" title="Go to Home Page"><img src="images/home.png" alt=""/></a>&nbsp;&nbsp;
+			   <span>&gt;</span>&nbsp;
+			</li>
+			<li class="home">
+				Classes&nbsp; 
+				<span>&gt;</span>
+			</li>
+			<li class="home">
+				 <span class="red">&nbsp;Cart&nbsp;</span>
+			</li>
+		</div>
+	   </ul>
+	   <table align="center" border=1 width=400 cellpadding=10>
+			<tr align="center"><td>
+				<div class="simpleCart_items"></div></div><br/><br/>
+					<!-- cart total (ex. $23.11)-->
+			</td></tr>
+			<tr align="center" bgcolor="#DBD5D4"><td>
+				<label><b>Total</b></label>
+			</td></tr>
+			<tr align="center"><td>
+				<div class="simpleCart_total"></div>
+					<!-- tax cost (ex. $1.38) -->
+			</td></tr>
+			<tr align="center" bgcolor="#DBD5D4"><td>
+				<label><b>Tax</b></label>
+			</td></tr>
+			<tr align="center"><td>
+				<div class="simpleCart_tax"></div>
+					<!-- grand total, including tax and shipping (ex. $28.49) -->
+				</td></tr>
+			<tr align="center" bgcolor="#DBD5D4"><td>
+				<label><b>Grand Total</b></label>
+			</td></tr>
+			<tr align="center"><td>
+				<div class="simpleCart_grandTotal"></div>
+			</td></tr>
+			<tr align="center"><td>
+			</br>
+					<a href="paymentdetails.html" class="simpleCart_checkout"><button type="button">Checkout</button></a>
+			</br>
+		    </br>	
+			</td></tr>
+  
+		</table>
+       <div class="grid-2">
+       	<div class="container">
+       		<p>We accept<img src="images/paypal.png" class="img-responsive" alt="" align="middle" /></p>
+       	</div>
+       </div>
+       <div class="footer_top">
+       	<div class="container">
+       		<div class="col-sm-2 grid-3">
+       			<h3>Customer Service</h3>
+       			<ul class="footer_list">
+					<li><a href="contact.html">Email Us</a></li>
+					<li><a href="customersupport.html">Chat</a></li>
+       				<li><a href="#">FAQ</a></li>
+       				<li><a href="#">Terms and conditions</a></li>
+       				<li><a href="#">Refunds</a></li>
+       			</ul>
+       		</div>
+       		<div class="col-sm-2 grid-3">
+       			<h3>About Us</h3>
+       			<ul class="footer_list">
+       				<li><a href="#">Instructors</a></li>
+       				<li><a href="#">About The Hobby Room</a></li>
+       				<li><a href="#">Meet the team</a></li>
+       				<li><a href="#">Careers</a></li>
+       				<li><a href="#">Blog</a></li>
+       			</ul>
+       		</div>
+       		<div class="col-sm-2 grid-3">
+       			<h3>Partners</h3>
+       			<ul class="footer_list">
+       				<li><a href="#">Ambassadors</a></li>
+       				<li><a href="#">Academic Partners</a></li>
+       				<li><a href="#">Become a Tutor</a></li>
+       			</ul>
+       		</div>
+       		<div class="col-sm-2 grid-3">
+       			<h3>Our Branches</h3>
+       			<ul class="footer_list">
+       				<li><a href="#">New Jersey</a></li>
+       				<li><a href="#">New York</a></li>
+       				<li><a href="#">Virginia</a></li>
+       				<li><a href="#">Maryland</a></li>
+       			</ul>
+       		</div>
+       		<div class="col-sm-2 grid-3">
+       			<h3>Social</h3>
+       			<ul class="footer_social">
+				  <li><a href="#"> <i class="tw1"> </i> </a></li>
+				  <li><a href="#"> <i class="db1"> </i> </a></li>
+				  <li><a href="#"> <i class="fb1"> </i></a></li>
+				  <li><a href="#"> <i class="g1"> </i></a></li>
+				  <li><a href="#"> <i class="thumb"> </i></a></li>
+				  <li><a href="#"> <i class="vimeo"> </i></a></li>
+				</ul>
+       		</div>
+       		<div class="col-sm-2">
+       			<img src="images/secure.png" alt=""/>
+       		</div>
+       	</div>
+       </div>
+       <div class="footer_bottom">
+       	<div class="container">
+       		<div class="cssmenu">
+				<ul>
+					<li class="active"><a href="login.html">Privacy & Cookies</a></li> |
+					<li><a href="checkout.html">Terms & Conditions</a></li> |
+					<li><a href="register.html">About Us</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+			    <p>&copy; INFS 640-Fall 2017 Group-7</p>
+		    </div>
+		    <div class="clearfix"> </div>
+       	</div>
+       </div>
+		    <div class="clearfix"> </div>
+       	
+</body>
+</html>		

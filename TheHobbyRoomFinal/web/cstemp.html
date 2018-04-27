@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Hobby Room</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/index1.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js">
+    function AddtoCart() {
+                console.log( 'hi');
+                var x=document.getElementById('Items');
+                var new_row = x.rows[1].cloneNode(true);
+                var len = x.rows.length;
+                new_row.cells[0].innerHTML = len;
+   
+                var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+                inp1.id += len;
+                inp1.value = '';
+                var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+                inp2.id += len;
+                inp2.value = '';
+                x.appendChild( new_row );
+        }
+</script>
+<script src="js/jquery.easydropdown.js"></script>
+</head>
+<body>
+<div class="header">
+   <div class="header_top">
+    <div class="container">
+	  <div class="header_top_left">
+	  	<p>customer care : 0-888-12-3456</p>
+	  </div>
+	  <div class="header_top_right">
+	  	<div class="lang_list">
+			<select tabindex="4" class="dropdown">
+				<option value="" class="label" value="">$ Us</option>
+				<option value="1">Dollar</option>
+				<option value="2">Euro</option>
+			</select>
+   		</div>
+   		<ul class="header_user_info">
+		  <a class="login" href="login.html">
+			<i class="user"></i> 
+			<li class="user_desc">My Account</li>
+		  </a>
+		  <div class="clearfix"> </div>
+	    </ul>
+	    <!-- start search-->
+			<div class="search-box">
+			   <div id="sb-search" class="sb-search">
+				  <form>
+					 <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+					 <input class="sb-search-submit" type="submit" value="">
+					 <span class="sb-icon-search"> </span>
+				  </form>
+			    </div>
+			 </div>
+			 <!----search-scripts---->
+			 <script src="js/classie.js"></script>
+			 <script src="js/uisearch.js"></script>
+			   <script>
+				 new UISearch( document.getElementById( 'sb-search' ) );
+			   </script>
+				<!----//search-scripts---->
+	            <div class="clearfix"> </div>
+		 </div>
+	  <div class="clearfix"> </div>
+	</div>
+  </div>
+ <div class="header_bottom">
+	<div class="container">	 			
+		<div class="logo" style="height:100px;width:100px">
+		  <a href="index.html"><img src="images/logo1.jpeg" alt=""/></a>
+		</div>	
+		<div class="header_bottom_right">			
+	        <div class="h_menu4"><!-- start h_menu4 -->
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="classes.html">Classes</a>
+                    <ul>
+							<li><a href="art.html">Art+Design</a></li>
+							<li><a href="sewing.html">Sewing</a></li>
+							<li><a href="quilting.html">Quilting</a></li>
+							<li><a href="classes.html">Paper</a></li>
+							<li><a href="classes.html">Knitting</a></li>
+							<li><a href="classes.html">Home+Food</a></li>
+                            <li><a href="classes.html">Jewellery</a></li>
+							<li><a href="classes.html">Holiday+Party</a></li>
+						</ul>
+					</li>
+					<li><a href="inspiration.html">Inspiration</a>
+						<ul>
+							<li><a href="inspiration.html">Inspiration Feeds</a></li>
+							<li><a href="inspiration.html">Pattern Library</a></li>
+							<li><a href="inspiration.html">Class collection</a></li>
+                            <li><a href="inspiration.html">Blog</a></li>
+						</ul>
+					</li>
+					<li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="free.html">Free</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+	      </div><!-- end h_menu4 -->
+		  <div class="shopping_cart">
+		 	<ul class="shopping_cart_top">
+			    <a href="cart.html">
+				   <li class="shop_left">Your cart</li>
+				   <li class="shop_right"><img src="images/arrow1.png" alt=""/></li>
+				    <div class="clearfix"></div>	
+				</a>
+			</ul>
+			<ul class="shopping_bag">
+			    <a href="cart.html">
+				   <li class="bag_left"><img src="images/bag.png" alt=""/></li>
+				   <li class="bag_right"> 3 Items | $73.85</li>
+				    <div class="clearfix"></div>	
+				</a>
+			</ul>		
+		  </div>
+	      <div class="clearfix"></div>		   
+      </div>
+    </div>
+  </div>
+</div>
